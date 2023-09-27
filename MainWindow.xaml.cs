@@ -103,6 +103,7 @@ namespace project_1_game
             if (CouterRandom <= 20)
             {
                 Player.Health -= Convert.ToInt32(Enemy.Damage * 100f / (100f - Player.Armor));
+                GameOver();
             }
             
 
@@ -126,7 +127,7 @@ namespace project_1_game
                 enemyArmor.Content = "Броня: " + Enemy.Armor;
                 enemyName.Content = "Имя: " + Enemy.Name;
             }
-            GameOver();
+            
 
 
         }
